@@ -1,0 +1,1 @@
+Configuración SchoolManagementSystem con gitignore
