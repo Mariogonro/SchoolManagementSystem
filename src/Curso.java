@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Curso {
     private String id;
     private String nombre;
@@ -51,5 +53,18 @@ public class Curso {
         this.descripcion = descripcion;
         this.numeroCreditos = numeroCreditos;
         this.version = version;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Curso curso = (Curso) o;
+        return Objects.equals(id, curso.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
